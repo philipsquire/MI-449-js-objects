@@ -53,7 +53,7 @@ const addJoke = function () {
     setup: jokeSetupInput.value,
     punchline: jokePunchlineInput.value
   }
-  updateJokesMenu()
+  updatePage()
   jokeLabelInput.value = ''
   jokeSetupInput.value = ''
   jokePunchlineInput.value = ''
@@ -69,7 +69,7 @@ const deleteInput = document.getElementById('delete-input')
 const deleteJoke = function () {
   const toRemove = deleteInput.value
   delete jokes[toRemove]
-  updateJokesMenu()
+  updatePage()
   deleteInput.value = ''
   stringifiedJokes = JSON.stringify(jokes)
   window.localStorage.setItem('jokes', stringifiedJokes)
